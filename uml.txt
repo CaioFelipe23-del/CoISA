@@ -1,0 +1,69 @@
+CoISA
+composes Descanso, RegistroTempoOnline, Disciplina, RegistroResumos
+---
+---
+---
+
+Descanso
+---
+- horasDescanso: int
+- numSemanas: int
+---
++ defineHorasDescanso(valor: int): void
++ defineNumeroSemanas(valor: int): void
++ getStatusGeral(): String
+---
+
+RegistroTempoOnline
+---
+- nomeDisciplina: String
+- tempoOnline: int
+- tempoEsperado: int
+---
++ RegistroTempoOnline(nomeDisciplina: String, tempoEsperado: int)
++ adicionaTempoOnline(tempo: int): void
++ atingiuMetaTempoOnline(): boolean
++ toString(): String
+---
+
+Disciplina
+---
+- nomeDisciplina: String
+- horasEstudo: int
+- notas: double[]
+- pesos: int[]
+---
++ Disciplina(nomeDisciplina: String)
++ Disciplina(nomeDisciplina: String, notas: double[])
++ Disciplina(nomeDisciplina: String, notas: double[], pesos: int[])
++ cadastraHoras(horas: int): void
++ cadastraNota(nota: int, valorNota: double): void
++ aprovado(): boolean
++ toString(): String
+---
+
+RegistroResumos
+composes Resumo
+---
+- tema: String
+- conteudo: String
+- resumos: Resumo[]
+---
++ RegistroResumos(valor: int)
++ adicionaResumo(tema: String, conteudo: String): void
++ pegaResumos(): String[]
++ imprimeResumos(): String
++ contaResumos(): int
++ temResumo(tema: String): boolean
+---
+
+Resumo
+---
+- tema: String
+- conteudo: String
+---
++ Resumo(tema: String, conteudo: String)
++ equals(obj: Object): boolean
++ hashcode(): int
+---
+
