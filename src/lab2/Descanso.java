@@ -15,7 +15,10 @@ public class Descanso {
     }
 
     public String getStatusGeral() {
-        int status = horasDescanso/numSemana;
+        int status = 0;
+        if (numSemana != 0) {
+            status = horasDescanso / numSemana;
+        }
 
         if (status >= 26) {
             return "descansado";

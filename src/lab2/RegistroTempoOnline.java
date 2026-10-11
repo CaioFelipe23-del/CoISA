@@ -6,7 +6,7 @@ public class RegistroTempoOnline {
     private int tempoEsperado;
 
     public RegistroTempoOnline(String nomeDisciplina) {
-        this(nomeDisciplina, 0);
+        this(nomeDisciplina, 120);
     }
 
     public RegistroTempoOnline(String nomeDisciplina, int tempoEsperado) {
@@ -28,6 +28,6 @@ public class RegistroTempoOnline {
 
     @Override
     public String toString() {
-        return nomeDisciplina + " " + tempoOnline + " " + tempoEsperado;
+        return nomeDisciplina + " " + tempoOnline + "/" + tempoEsperado;
     }
 }
